@@ -3,6 +3,8 @@ require "bundler/setup"
 
 require 'nokogiri'
 require 'faraday'
+require 'ferret'
+
 require 'uri'
 require 'fileutils'
 
@@ -27,6 +29,7 @@ module InformationRetrievalLessons
 	module Repositories
 		autoload :DummyRepository, File.expand_path('information-retrieval-lessons/repositories/dummy_repository', File.dirname(__FILE__))
 		autoload :FileRepository, File.expand_path('information-retrieval-lessons/repositories/file_repository', File.dirname(__FILE__))
+		autoload :IndexRepository, File.expand_path('information-retrieval-lessons/repositories/index_repository', File.dirname(__FILE__))
 	end
 
 	# load classes now
