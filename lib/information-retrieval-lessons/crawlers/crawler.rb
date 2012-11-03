@@ -93,7 +93,7 @@ module InformationRetrievalLessons
 								@repository.process_document(document)
 							end
 						end
-					rescue => e
+					rescue Faraday::Error, URI::Error => e
 						puts "#{link.url}: #{e}"
 					end
 
