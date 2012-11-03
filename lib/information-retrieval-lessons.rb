@@ -35,6 +35,7 @@ module InformationRetrievalLessons
 		autoload :FileRepository, File.expand_path('information-retrieval-lessons/repositories/file_repository', File.dirname(__FILE__))
 		autoload :IndexRepository, File.expand_path('information-retrieval-lessons/repositories/index_repository', File.dirname(__FILE__))
 		autoload :AnalyzeRepository, File.expand_path('information-retrieval-lessons/repositories/analyze_repository', File.dirname(__FILE__))
+		autoload :ExtractRepository, File.expand_path('information-retrieval-lessons/repositories/extract_repository', File.dirname(__FILE__))
 	end
 
 	# load classes now
