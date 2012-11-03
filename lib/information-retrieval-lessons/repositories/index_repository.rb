@@ -1,7 +1,18 @@
 module InformationRetrievalLessons
 	module Repositories
+		##
+		#
+		# Indexes input documents.
+		#
 		class IndexRepository
 
+			##
+			#
+			# Create a new IndexRepository.
+			#
+			# @param [String] path Path to store index (created if doesn't exist). Index is stored in memory if path is nil. 
+			# @param [Hash] options Options passed to Ferret::Index::Index.new.
+			#
 			def initialize(path = nil, options = {})
 				options.merge! path: path if path
 				options.merge! key: :url
@@ -29,6 +40,15 @@ module InformationRetrievalLessons
 				@index << ferret_document
 			end
 
+			##
+			#
+			# Search for query in index.
+			#
+			# @param [String] query Query string using Ferret query syntax.
+			# @param [Proc] &block Block executed for each found document. Document (Ferret::Index::LazyDoc) and score (Integer) are passed to the block. 
+			#
+			# @returns Number of found documents.
+			#
 			def search(query, &block)
 				@index.search_each(query) do |id, score|
 					yield @index[id], score

@@ -3,7 +3,15 @@ module InformationRetrievalLessons
 		class Document
 			attr_accessor :url, :content_type, :size, :raw_body
 
-			# factory
+			##
+			#
+			# Creates correct type of document.
+			#
+			# @param [String] url URL of document.
+			# @param [Faraday::Response] response Faraday::Response object.
+			#
+			# @returns Correct subclass of Document based on content_type.
+			#
 			def self.from_url_and_response(url, response)
 				# no error pages
 				return nil unless response.status == 200 

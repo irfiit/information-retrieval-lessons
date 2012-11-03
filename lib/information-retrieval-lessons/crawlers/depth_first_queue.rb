@@ -1,5 +1,9 @@
 module InformationRetrievalLessons
 	module Crawlers
+		##
+		#
+		# LIFO-based crawling.
+		#
 		class DepthFirstQueue
 
 			def initialize

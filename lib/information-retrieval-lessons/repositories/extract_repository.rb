@@ -1,7 +1,17 @@
 module InformationRetrievalLessons
 	module Repositories
+		##
+		#
+		# Performs extraction on input documents.
+		#
 		class ExtractRepository
 
+			##
+			#
+			# Create a new ExtractRepository.
+			#
+			# @param [RegExp] regexp Regular expression to scan for in input documents.
+			#
 			def initialize(regexp)
 				@regexp = regexp
 			end

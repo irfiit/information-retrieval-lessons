@@ -1,16 +1,28 @@
 module InformationRetrievalLessons
 	module Repositories
+		
+		##
+		#
+		# Perform analysis (tokenization and filtering) on input documents.
+		#
 		class AnalyzeRepository
 
+			##
 			#
-			# InformationRetrievalLessons::Analyzers::SampleAnalyzer
-			# Ferret::Analysis::AsciiLetterAnalyzer
-			# Ferret::Analysis::AsciiStandardAnalyzer
-			# Ferret::Analysis::AsciiWhiteSpaceAnalyzer
-			# Ferret::Analysis::LetterAnalyzer
-			# Ferret::Analysis::RegExpAnalyzer
-			# Ferret::Analysis::StandardAnalyzer
-			# Ferret::Analysis::WhiteSpaceAnalyzer
+			# Create a new AnalyzeRepository.
+			#
+			# @param [Ferret::Analysis::Analyzer] analyzer Analyzer used to process documents.
+			#
+			# Analyzer examples:
+			#
+			# 	InformationRetrievalLessons::Analyzers::SampleAnalyzer
+			# 	Ferret::Analysis::AsciiLetterAnalyzer
+			# 	Ferret::Analysis::AsciiStandardAnalyzer
+			# 	Ferret::Analysis::AsciiWhiteSpaceAnalyzer
+			# 	Ferret::Analysis::LetterAnalyzer
+			# 	Ferret::Analysis::RegExpAnalyzer
+			# 	Ferret::Analysis::StandardAnalyzer
+			# 	Ferret::Analysis::WhiteSpaceAnalyzer
 			#
 			def initialize(analyzer)
 				@analyzer = analyzer

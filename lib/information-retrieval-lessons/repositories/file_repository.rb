@@ -1,7 +1,17 @@
 module InformationRetrievalLessons
 	module Repositories
+		##
+		#
+		# Store input documents in filesystem.
+		#
 		class FileRepository
 
+			##
+			#
+			# Create a new FileRepository.
+			#
+			# @param [String] path Path to directory where documents will be stored. Directory path is created if it doesn't exist.
+			#
 			def initialize(path)
 				@path = path
 			end

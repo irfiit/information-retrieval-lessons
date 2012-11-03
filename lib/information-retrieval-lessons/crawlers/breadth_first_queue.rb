@@ -1,5 +1,9 @@
 module InformationRetrievalLessons
 	module Crawlers
+		##
+		#
+		# FIFO-based crawling.
+		#
 		class BreadthFirstQueue
 
 			def initialize
