@@ -61,6 +61,7 @@ module InformationRetrievalLessons
 						end
 					rescue => e
 						puts "#{link.url}: #{e}"
+						raise e
 					end
 
 					# download limit reached?

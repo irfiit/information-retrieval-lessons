@@ -10,6 +10,10 @@ require 'fileutils'
 
 module InformationRetrievalLessons
 
+	module Analyzers
+		autoload :SampleAnalyzer, File.expand_path('information-retrieval-lessons/analyzers/sample_analyzer', File.dirname(__FILE__))
+	end
+
 	module Crawlers
 		autoload :Crawler, File.expand_path('information-retrieval-lessons/crawlers/crawler', File.dirname(__FILE__))
 		autoload :BreadthFirstQueue, File.expand_path('information-retrieval-lessons/crawlers/breadth_first_queue', File.dirname(__FILE__))
@@ -30,6 +34,7 @@ module InformationRetrievalLessons
 		autoload :DummyRepository, File.expand_path('information-retrieval-lessons/repositories/dummy_repository', File.dirname(__FILE__))
 		autoload :FileRepository, File.expand_path('information-retrieval-lessons/repositories/file_repository', File.dirname(__FILE__))
 		autoload :IndexRepository, File.expand_path('information-retrieval-lessons/repositories/index_repository', File.dirname(__FILE__))
+		autoload :AnalyzeRepository, File.expand_path('information-retrieval-lessons/repositories/analyze_repository', File.dirname(__FILE__))
 	end
 
 	# load classes now
