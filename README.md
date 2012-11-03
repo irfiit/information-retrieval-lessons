@@ -29,7 +29,7 @@ Installation
   $ bundle
   ```
 
- 5. Try examples.
+5. Try examples.
 
    ```bash
   $ ruby examples/index_fiit_stuba_sk.rb
