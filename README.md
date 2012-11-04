@@ -19,7 +19,7 @@ Installation
 3. Clone repository.
 
   ```bash
-  $ git clone git@github.com:martinliptak/information-retrieval-lessons.git
+  $ git clone git@github.com:irfiit/information-retrieval-lessons.git
   ```
 
 4. Run Bundler to install dependencies.
