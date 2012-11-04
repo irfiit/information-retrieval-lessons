@@ -71,6 +71,7 @@ module InformationRetrievalLessons
 
 					begin
 						# download
+						# puts link.url
 						response = Faraday.get(link.url)
 
 						# document factory

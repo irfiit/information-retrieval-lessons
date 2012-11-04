@@ -13,6 +13,9 @@ module InformationRetrievalLessons
 						@uri.host = @from_uri.host
 						@uri.port = @from_uri.port if @from_uri.port != 80
 						@uri.registry = @from_uri.registry
+						unless @uri.path.start_with?('/')
+							@uri.path = "#{@from_uri.path.sub(/\/[^\/]+\z/, '')}/#{@uri.path}" 
+						end
 					end
 				end
 				@uri.fragment = nil
