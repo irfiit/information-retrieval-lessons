@@ -5,7 +5,9 @@ repository = InformationRetrievalLessons::Repositories::IndexRepository.new('tmp
 print "Query: "
 query = gets
 
-hits = repository.search("body:\"#{query}\"") do |document, score|
-	puts "#{document[:url]} #{score}"
+hits = repository.search(query) do |document, score|
+	puts "#{document[:url]} (score #{score})"
+	puts "#{document[:title]}"
+	puts "----------------------------"
 end
 puts "Found #{hits} documents."

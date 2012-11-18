@@ -4,6 +4,5 @@ repository = InformationRetrievalLessons::Repositories::IndexRepository.new('tmp
 queue = InformationRetrievalLessons::Crawlers::BreadthFirstQueue.new
 #crawler = Crawlers::Crawler.new(repository, queue, filter: lambda { |document| document.size > 10000 })
 crawler = InformationRetrievalLessons::Crawlers::Crawler.new(repository, queue, 
-								url_pattern: %r{\Ahttp://www\.fiit\.stuba\.sk}, 
-								download_limit: 100)
+								url_pattern: %r{\Ahttp://www\.fiit\.stuba\.sk})
 crawler.crawl('http://www.fiit.stuba.sk/')

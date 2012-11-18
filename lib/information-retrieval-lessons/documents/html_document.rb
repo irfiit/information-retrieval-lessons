@@ -12,10 +12,10 @@ module InformationRetrievalLessons
 				nokogiri = Nokogiri::HTML(response.body)
 				@title = nokogiri.css('title').first.content
 				@body = nokogiri.css('body').first.content
-				@urls = []
+				@urls = {}
 				nokogiri.css('a[href]').each do |a|
 					u = a[:href]
-					@urls << u if is_url?(u) 
+					@urls[u] = a.content if is_url?(u) 
 				end
 			end
 		end

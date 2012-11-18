@@ -1,7 +1,7 @@
 module InformationRetrievalLessons
 	module Documents
 		class Document
-			attr_accessor :url, :content_type, :size, :raw_body
+			attr_accessor :url, :content_type, :size, :raw_body, :anchor_text
 
 			##
 			#

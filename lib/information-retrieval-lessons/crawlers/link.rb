@@ -1,10 +1,11 @@
 module InformationRetrievalLessons
 	module Crawlers
 		class Link
-			attr_accessor :uri, :from_uri, :depth
+			attr_accessor :uri, :from_uri, :depth, :anchor_text
 
-			def initialize(uri, from_uri = nil, depth = 0)
+			def initialize(uri, anchor_text = '', from_uri = nil, depth = 0)
 				@uri = URI(URI.encode(uri))
+				@anchor_text = anchor_text
 				if from_uri
 					@from_uri = URI(URI.encode(from_uri))
 					unless @uri.scheme

@@ -71,7 +71,7 @@ module InformationRetrievalLessons
 
 					begin
 						# download
-						# puts link.url
+						#puts link.url
 						response = Faraday.get(link.url)
 
 						# document factory
@@ -82,12 +82,15 @@ module InformationRetrievalLessons
 
 							# add links to queue unless they are filtered
 							if document.respond_to? :urls
-								document.urls.each do |l|
+								document.urls.each do |l, t|
 									if not @options[:url_pattern] or @options[:url_pattern] =~ l
-										@queue.add_link Link.new(l, link.url, link.depth + 1)
+										@queue.add_link Link.new(l, t, link.url, link.depth + 1)
 									end
 								end
 							end
+
+							# set anchor text
+							document.anchor_text = link.anchor_text
 
 							# add document to repository unless it is filtered
 							unless @options[:filter] and @options[:filter].call(document)

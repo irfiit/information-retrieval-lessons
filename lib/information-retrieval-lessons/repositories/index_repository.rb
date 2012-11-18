@@ -15,7 +15,6 @@ module InformationRetrievalLessons
 			#
 			def initialize(path = nil, options = {})
 				options.merge! path: path if path
-				options.merge! key: :url
 				@index = Ferret::Index::Index.new(options)
 
 				if @index.size == 0 # new index?
@@ -36,6 +35,8 @@ module InformationRetrievalLessons
 
 				ferret_document[:title] = document.title if document.respond_to?(:title)
 				ferret_document[:body] = document.body if document.respond_to?(:body)
+
+				ferret_document[:anchor_text] = document.anchor_text
 
 				@index << ferret_document
 			end
