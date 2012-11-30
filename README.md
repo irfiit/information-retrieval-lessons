@@ -60,6 +60,17 @@ Live site at http://www.fiit.stuba.sk/.
 - index_fiit_stuba_sk.rb
 - search_fiit_stuba_sk.rb
 
+Documentation
+-----------------------------
+
+* Public methods and classes documentation can be found in *doc/index.html*.
+* Write comments using [RDoc syntax](https://github.com/rdoc/rdoc) for every public method or class. 
+* Update documentation before committing.
+
+```bash
+  $ rdoc
+  ```
+
 Development
 -----------------------------
 
