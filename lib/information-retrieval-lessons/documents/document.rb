@@ -7,10 +7,12 @@ module InformationRetrievalLessons
 			#
 			# Creates correct type of document.
 			#
-			# @param [String] url URL of document.
-			# @param [Faraday::Response] response Faraday::Response object.
+			# ==== Parameters
 			#
-			# @returns Correct subclass of Document based on content_type.
+			# - [String] url URL of document.
+			# - [Faraday::Response] response Faraday::Response object.
+			#
+			# Returns Correct subclass of Document based on content_type.
 			#
 			def self.from_url_and_response(url, response)
 				# no error pages

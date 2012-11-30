@@ -10,7 +10,9 @@ module InformationRetrievalLessons
 			#
 			# Create a new ExtractRepository.
 			#
-			# @param [RegExp] regexp Regular expression to scan for in input documents.
+			# ==== Parameters
+			#
+			# - [RegExp] regexp Regular expression to scan for in input documents.
 			#
 			def initialize(regexp)
 				@regexp = regexp

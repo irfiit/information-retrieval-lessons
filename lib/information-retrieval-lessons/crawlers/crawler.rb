@@ -16,22 +16,28 @@ module InformationRetrievalLessons
 			#
 			# Create a new Crawler.
 			#
-			# @param repository Repository from InformationRetrievalLessons::Repositories to process downloaded documents.
-			# @param queue Either InformationRetrievalLessons::Crawlers::BreadthFirstQueue or InformationRetrievalLessons::Crawlers::DepthFirstQueue.
-			# @param options Set max_depth (Integer), download_limit (Integer), url_pattern (RegExp) or filter (Lambda).
+			# ==== Parameters
 			#
-			# Examples:
+			# - repository Repository from InformationRetrievalLessons::Repositories to process downloaded documents.
+			# - queue Either InformationRetrievalLessons::Crawlers::BreadthFirstQueue or InformationRetrievalLessons::Crawlers::DepthFirstQueue.
+			# - options Set max_depth (Integer), download_limit (Integer), url_pattern (RegExp) or filter (Lambda).
+			#
+			# ==== Examples
 			#
 			# Limit number of downloaded documents.
+			#
 			# 	InformationRetrievalLessons::Crawlers::Crawler.new(repository, queue, download_limit: 100)
 			#
 			# Restrict crawler to single domain.
+			#
 			# 	InformationRetrievalLessons::Crawlers::Crawler.new(repository, queue, url_pattern: %r{\Ahttp://www\.fiit\.stuba\.sk})
 			#
 			# Filter out all documents larger than 10 KB.
+			#
 			# 	InformationRetrievalLessons::Crawlers::Crawler.new(repository, queue, filter: lambda { |document| document.size > 10000 })
 			# 
 			# Download only PDF documents.
+			#
 			# 	InformationRetrievalLessons::Crawlers::Crawler.new(repository, queue, filter: lambda { |document| document.content_type != 'application/pdf' })
 			#
 			def initialize(repository, queue, options = {})

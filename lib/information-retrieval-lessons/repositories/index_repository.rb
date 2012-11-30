@@ -10,8 +10,10 @@ module InformationRetrievalLessons
 			#
 			# Create a new IndexRepository.
 			#
-			# @param [String] path Path to store index (created if doesn't exist). Index is stored in memory if path is nil. 
-			# @param [Hash] options Options passed to Ferret::Index::Index.new.
+			# ==== Parameters
+			#
+			# - [String] path Path to store index (created if doesn't exist). Index is stored in memory if path is nil. 
+			# - [Hash] options Options passed to Ferret::Index::Index.new.
 			#
 			def initialize(path = nil, options = {})
 				options.merge! path: path if path

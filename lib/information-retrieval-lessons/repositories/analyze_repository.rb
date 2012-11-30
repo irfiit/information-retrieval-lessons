@@ -11,9 +11,11 @@ module InformationRetrievalLessons
 			#
 			# Create a new AnalyzeRepository.
 			#
-			# @param [Ferret::Analysis::Analyzer] analyzer Analyzer used to process documents.
+			# ==== Parameters
 			#
-			# Analyzer examples:
+			# - [Ferret::Analysis::Analyzer] analyzer Analyzer used to process documents.
+			#
+			# ==== Analyzers
 			#
 			# 	InformationRetrievalLessons::Analyzers::SampleAnalyzer
 			# 	Ferret::Analysis::AsciiLetterAnalyzer

@@ -10,7 +10,9 @@ module InformationRetrievalLessons
 			#
 			# Create a new FileRepository.
 			#
-			# @param [String] path Path to directory where documents will be stored. Directory path is created if it doesn't exist.
+			# ==== Parameters
+			#
+			# - [String] path Path to directory where documents will be stored. Directory path is created if it doesn't exist.
 			#
 			def initialize(path)
 				@path = path

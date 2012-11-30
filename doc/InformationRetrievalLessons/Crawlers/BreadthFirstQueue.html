@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class InformationRetrievalLessons::Crawlers::BreadthFirstQueue - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/information-retrieval-lessons/crawlers/breadth_first_queue.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-add_link">#add_link</a>
+    
+    <li><a href="#method-i-empty-3F">#empty?</a>
+    
+    <li><a href="#method-i-remove_link">#remove_link</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../InformationRetrievalLessons.html">InformationRetrievalLessons</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Analyzers.html">InformationRetrievalLessons::Analyzers</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Analyzers/SampleAnalyzer.html">InformationRetrievalLessons::Analyzers::SampleAnalyzer</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Crawlers.html">InformationRetrievalLessons::Crawlers</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Crawlers/BreadthFirstQueue.html">InformationRetrievalLessons::Crawlers::BreadthFirstQueue</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Crawlers/Crawler.html">InformationRetrievalLessons::Crawlers::Crawler</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Crawlers/DepthFirstQueue.html">InformationRetrievalLessons::Crawlers::DepthFirstQueue</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Crawlers/Link.html">InformationRetrievalLessons::Crawlers::Link</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Documents.html">InformationRetrievalLessons::Documents</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Documents/Document.html">InformationRetrievalLessons::Documents::Document</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Documents/HtmlDocument.html">InformationRetrievalLessons::Documents::HtmlDocument</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Helpers.html">InformationRetrievalLessons::Helpers</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Helpers/LinkHelper.html">InformationRetrievalLessons::Helpers::LinkHelper</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories.html">InformationRetrievalLessons::Repositories</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories/AnalyzeRepository.html">InformationRetrievalLessons::Repositories::AnalyzeRepository</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories/DummyRepository.html">InformationRetrievalLessons::Repositories::DummyRepository</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories/ExtractRepository.html">InformationRetrievalLessons::Repositories::ExtractRepository</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories/FileRepository.html">InformationRetrievalLessons::Repositories::FileRepository</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories/IndexRepository.html">InformationRetrievalLessons::Repositories::IndexRepository</a>
+  
+    <li><a href="../../InformationRetrievalLessons/Repositories/SegmentizeRepository.html">InformationRetrievalLessons::Repositories::SegmentizeRepository</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class InformationRetrievalLessons::Crawlers::BreadthFirstQueue</h1>
+
+  <div id="description" class="description">
+    
+<p>FIFO-based crawling.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/information-retrieval-lessons/crawlers/breadth_first_queue.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+        <span class="ruby-ivar">@links</span> = []
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_link" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_link</span><span
+            class="method-args">(link)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_link-source">
+            <pre><span class="ruby-comment"># File lib/information-retrieval-lessons/crawlers/breadth_first_queue.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_link</span>(<span class="ruby-identifier">link</span>)
+        <span class="ruby-ivar">@links</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">link</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_link-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_link-method -->
+
+    
+      <div id="method-i-empty-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">empty?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="empty-3F-source">
+            <pre><span class="ruby-comment"># File lib/information-retrieval-lessons/crawlers/breadth_first_queue.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">empty?</span>
+        <span class="ruby-ivar">@links</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- empty-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- empty-3F-method -->
+
+    
+      <div id="method-i-remove_link" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_link</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="remove_link-source">
+            <pre><span class="ruby-comment"># File lib/information-retrieval-lessons/crawlers/breadth_first_queue.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_link</span>
+        <span class="ruby-ivar">@links</span>.<span class="ruby-identifier">shift</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remove_link-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remove_link-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
