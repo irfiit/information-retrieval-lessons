@@ -62,8 +62,17 @@ module InformationRetrievalLessons
 					next if @options[:max_depth] and link.depth > @options[:max_depth]
 
 					# visited?
-					next if @visited_urls[link.url]
-					@visited_urls[link.url] = true
+					if @visited_urls[link.url]
+						
+						# add another anchor text
+						if @repository.respond_to? :add_anchor_text
+							@repository.add_anchor_text link.url, link.anchor_text
+						end
+
+						next
+					else
+						@visited_urls[link.url] = true
+					end
 
 					# be polite
 					sleep(0.2) if last_host == link.uri.host
@@ -89,7 +98,7 @@ module InformationRetrievalLessons
 								end
 							end
 
-							# set anchor text
+							# add first anchor text
 							document.anchor_text = link.anchor_text
 
 							# add document to repository unless it is filtered
