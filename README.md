@@ -60,22 +60,15 @@ Live site at http://www.fiit.stuba.sk/.
 - index_fiit_stuba_sk.rb
 - search_fiit_stuba_sk.rb
 
-Documentation
------------------------------
-
-* Public methods and classes documentation can be found in *doc/index.html*.
-* Write comments using [RDoc syntax](https://github.com/rdoc/rdoc) for every public method or class. 
-* Update documentation before committing.
-
-```bash
-  $ rdoc
-  ```
-
 Development
 -----------------------------
 
 * Use your own branch. When your feature is finished, merge master into your branch and create a pull request.
 * Write commit messages in English. See other commit messages and keep conventions.
-* Write comments in English. Comment classes and methods using RDoc syntax. 
+* Write comments in English. Comment classes and methods using [RDoc syntax](https://github.com/rdoc/rdoc) (see other comments). Update documentation before committing.
+
+```bash
+  $ rdoc
+  ```
 
 That's all, good luck :)
