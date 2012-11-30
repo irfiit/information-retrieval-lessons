@@ -43,16 +43,16 @@ Examples
 
 Original irLessons data located at http://irfiit.github.com/data/1.html.
 
-- analyze_irlessons_data.rb
-- crawl_irlessons_data.rb
-- extract_irlessons_data.rb
-- index_irlessons_data.rb
-- search_irlessons_data.rb
-- segmentize_irlessons_data.rb
+- analyze_irlessons_data.rb - crawl and analyze using Ferret analyzers or custom analyzer
+- crawl_irlessons_data.rb - crawl and print crawled pages
+- extract_irlessons_data.rb - crawl and extract e-mails
+- index_irlessons_data.rb - crawl and index using ferret
+- search_irlessons_data.rb - search indexed pages
+- segmentize_irlessons_data.rb - replace <li> and <br> with dashes and newlines
 
 ## fiit.stuba.sk examples
 
-Located at http://www.fiit.stuba.sk/.
+Live site at http://www.fiit.stuba.sk/.
 
 - analyze_fiit_stuba_sk.rb
 - download_fiit_stuba_sk.rb
