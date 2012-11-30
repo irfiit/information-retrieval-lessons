@@ -41,7 +41,7 @@ Examples
 
 ## irLessons data examples
 
-Original irLessons data located at [http://irfiit.github.com/data/1.html].
+Original irLessons data located at http://irfiit.github.com/data/1.html.
 
 - analyze_irlessons_data.rb
 - crawl_irlessons_data.rb
@@ -52,7 +52,7 @@ Original irLessons data located at [http://irfiit.github.com/data/1.html].
 
 ## fiit.stuba.sk examples
 
-Located at [http://www.fiit.stuba.sk/].
+Located at http://www.fiit.stuba.sk/.
 
 - analyze_fiit_stuba_sk.rb
 - download_fiit_stuba_sk.rb
