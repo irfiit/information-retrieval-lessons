@@ -46,7 +46,7 @@ Original irLessons data located at http://irfiit.github.com/data/1.html.
 - analyze_irlessons_data.rb *(crawl and analyze using Ferret analyzers or custom analyzer)*
 - crawl_irlessons_data.rb *(crawl and print crawled pages)*
 - extract_irlessons_data.rb *(crawl and extract e-mails)*
-- index_irlessons_data.rb *(crawl and index using ferret)*
+- index_irlessons_data.rb *(crawl and index using Ferret)*
 - search_irlessons_data.rb *(search indexed pages)*
 - segmentize_irlessons_data.rb *(replace li and br with dashes and newlines)*
 
@@ -67,7 +67,7 @@ Development
 * Write commit messages in English. See other commit messages and keep conventions.
 * Write comments in English. Comment classes and methods using [RDoc syntax](https://github.com/rdoc/rdoc) (see other comments). Update documentation before committing.
 
-```bash
+  ```bash
   $ rdoc
   ```
 
