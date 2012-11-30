@@ -29,7 +29,8 @@ module InformationRetrievalLessons
 			end
 
 			def process_document(document)
-				token_stream = @analyzer.token_stream('body', document.raw_body)
+				input = document.respond_to?(:body) ? document.body : document.raw_body
+				token_stream = @analyzer.token_stream('body', input)
 				
 				puts document.url
 				while (n = token_stream.next)
