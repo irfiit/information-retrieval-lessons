@@ -65,7 +65,9 @@ Development
 
 * Use your own branch. When your feature is finished, merge master into your branch and create a pull request.
 * Write commit messages in English. See other commit messages and keep conventions.
-* Write comments in English. Comment classes and methods using [RDoc syntax](https://github.com/rdoc/rdoc) (see other comments). Update documentation before committing.
+* Write comments in English. 
+* Comment classes and methods using [RDoc syntax](https://github.com/rdoc/rdoc). See other comments. 
+* Update documentation.
 
   ```bash
   $ rdoc
