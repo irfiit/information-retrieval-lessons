@@ -36,6 +36,30 @@ Installation
   $ ruby examples/search_fiit_stuba_sk.rb
   ```
 
+Examples
+-----------------------------
+
+## irLessons data examples
+
+Original irLessons data located at [http://irfiit.github.com/data/1.html].
+
+- analyze_irlessons_data.rb
+- crawl_irlessons_data.rb
+- extract_irlessons_data.rb
+- index_irlessons_data.rb
+- search_irlessons_data.rb
+- segmentize_irlessons_data.rb
+
+## fiit.stuba.sk examples
+
+Located at [http://www.fiit.stuba.sk/].
+
+- analyze_fiit_stuba_sk.rb
+- download_fiit_stuba_sk.rb
+- extract_fiit_stuba_sk.rb
+- index_fiit_stuba_sk.rb
+- search_fiit_stuba_sk.rb
+
 Development
 -----------------------------
 
